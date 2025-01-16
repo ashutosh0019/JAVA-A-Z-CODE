@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 public class Methods {
 
     public static void main(String[] args) {
@@ -9,6 +12,13 @@ public class Methods {
 
         //dynamic method (with arguments)
         stu_name("ashutosh", 1);
+
+        //sqaure mentod calling 
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("enter any number to make square");
+        int numb = sc.nextInt();
+        square(numb);
 
     }
 
@@ -22,4 +32,12 @@ public class Methods {
         System.out.println("name: "+ name);
         System.out.println("roll: "+ roll);
     }
+
+    //square of user input number
+    public static void square(int num) {
+        int sqr = num * num;
+        System.out.println("square of "+num+ " is "+ sqr);
+    }
+
+    
 }
