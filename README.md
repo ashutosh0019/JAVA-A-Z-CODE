@@ -1,6 +1,5 @@
 # JAVA-A-Z-CODE
 Here’s a list of basic Java programming questions on arrays:
-
 ### **Basic Level:**
 1. Write a Java program to **declare, initialize, and print** an array.
 2. Write a Java program to **find the largest element** in an array.
