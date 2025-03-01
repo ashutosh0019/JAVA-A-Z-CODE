@@ -1,41 +1,19 @@
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class ArrayBasic_11 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("enter the size of the array");
-        int arr_size = sc.nextInt();
+        System.out.println("Java program to find the second largest and second smallest element in an array");
 
-        int arr [] = new int [arr_size];
+        int arr[] = {1,2,3,14,5,6,7,8};
+        Arrays.sort(arr);
+        int largest_element = arr[arr.length-1];
+        int smallest_element = arr[0];
+        System.out.println(largest_element+" "+smallest_element);
 
-        System.out.println("enter "+arr_size+" elements in array");
-        for(int i=0; i<arr.length; i++){
-            arr[i]= sc.nextInt();
-        }
+        int second_largest_element = arr[arr.length-2];
+        int second_smallest_element = arr[1];
+        System.out.println(second_largest_element+" "+second_smallest_element);
         
-        System.out.println("your entered these "+arr_size+" elements in array");
-        for(int i =0; i<arr.length; i++){
-            System.out.print(arr[i]+" ");
-        }
-
-        System.out.println();
-
-        System.out.println("these element are even number");
-        for(int num : arr){
-            if(num%2==0){
-                System.out.print(num+" ");
-            }
-        }
-        System.out.println();
-        System.out.println("these element are odd number");
-        for(int num : arr){
-            if(num%2!=0){
-                System.out.print(num+" ");
-            }
-        }
-        System.out.println();
-
-
-        sc.close();
+        
     }
 }

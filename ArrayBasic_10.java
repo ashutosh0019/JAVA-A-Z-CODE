@@ -1,32 +1,41 @@
+import java.util.Scanner;
+
 public class ArrayBasic_10 {
     public static void main(String[] args) {
-        System.out.println("Java program to sort an array in ascending and descending order");
+         Scanner sc = new Scanner(System.in);
+        System.out.println("enter the size of the array");
+        int arr_size = sc.nextInt();
 
-        int arr [] = {1,5,4,2,3,6,9,7,4,1,2,5,3};
+        int arr [] = new int [arr_size];
+
+        System.out.println("enter "+arr_size+" elements in array");
         for(int i=0; i<arr.length; i++){
-            // System.out.println("ascending order");
-            boolean swapped = false;
-            for(int j = 0; j<arr.length-1; j++){
-                if(arr[j]>arr[j+1]){
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
-                    swapped = true;
+            arr[i]= sc.nextInt();
+        }
+        
+        System.out.println("your entered these "+arr_size+" elements in array");
+        for(int i =0; i<arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
 
-                }
+        System.out.println();
+
+        System.out.println("these element are even number");
+        for(int num : arr){
+            if(num%2==0){
+                System.out.print(num+" ");
             }
-            if(!swapped)break;
         }
-        System.out.println("ascending order of array element");
-        for(int i = 0; i<arr.length; i++){
-            System.out.print(arr[i]+" ");
+        System.out.println();
+        System.out.println("these element are odd number");
+        for(int num : arr){
+            if(num%2!=0){
+                System.out.print(num+" ");
+            }
         }
         System.out.println();
 
-        System.out.println("descending order of array element");
-        for(int i = arr.length-1; i>=0; i--){
-            System.out.print(arr[i]+" ");
-        }
-        System.out.println();
+
+        sc.close();
     }
 }
